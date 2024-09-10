@@ -491,6 +491,7 @@ export interface ApiBolsistaBolsista extends Struct.CollectionTypeSchema {
     singularName: 'bolsista';
     pluralName: 'bolsistas';
     displayName: 'Bolsistas';
+    description: '';
   };
   options: {
     draftAndPublish: false;
@@ -500,6 +501,7 @@ export interface ApiBolsistaBolsista extends Struct.CollectionTypeSchema {
     esporte: Schema.Attribute.String & Schema.Attribute.Required;
     foto: Schema.Attribute.Media<'images' | 'files'> &
       Schema.Attribute.Required;
+    depoimento: Schema.Attribute.Blocks;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
@@ -547,20 +549,22 @@ export interface ApiMentorMentor extends Struct.CollectionTypeSchema {
 }
 
 export interface ApiProcessoSeletivoProcessoSeletivo
-  extends Struct.CollectionTypeSchema {
+  extends Struct.SingleTypeSchema {
   collectionName: 'processos_seletivos';
   info: {
     singularName: 'processo-seletivo';
     pluralName: 'processos-seletivos';
-    displayName: 'Processos Seletivos';
+    displayName: 'Processo Seletivo';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
-    inicio: Schema.Attribute.Date & Schema.Attribute.Required;
-    fim: Schema.Attribute.Date & Schema.Attribute.Required;
-    formulario: Schema.Attribute.String & Schema.Attribute.Required;
+    aberto: Schema.Attribute.Boolean &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<false>;
+    titulo: Schema.Attribute.String & Schema.Attribute.Required;
+    link: Schema.Attribute.String & Schema.Attribute.Required;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
@@ -576,20 +580,19 @@ export interface ApiProcessoSeletivoProcessoSeletivo
   };
 }
 
-export interface ApiRelatorioRelatorio extends Struct.CollectionTypeSchema {
+export interface ApiRelatorioRelatorio extends Struct.SingleTypeSchema {
   collectionName: 'relatorios';
   info: {
     singularName: 'relatorio';
     pluralName: 'relatorios';
     displayName: 'Relat\u00F3rios';
+    description: '';
   };
   options: {
     draftAndPublish: false;
   };
   attributes: {
-    nome: Schema.Attribute.String & Schema.Attribute.Required;
-    arquivo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
-      Schema.Attribute.Required;
+    relatorios: Schema.Attribute.Component<'documentos.relatorio', true>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;

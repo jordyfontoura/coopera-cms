@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_documentos_relatorios",
+  "info": {
+    "displayName": "Relatório",
+    "icon": "archive"
+  },
+  "options": {},
+  "attributes": {
+    "nome": {
+      "type": "string",
+      "required": true
+    },
+    "arquivo": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

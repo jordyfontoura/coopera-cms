@@ -4,7 +4,8 @@
   "info": {
     "singularName": "bolsista",
     "pluralName": "bolsistas",
-    "displayName": "Bolsistas"
+    "displayName": "Bolsistas",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -20,13 +21,16 @@
       "required": true
     },
     "foto": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images",
         "files"
-      ],
-      "type": "media",
-      "multiple": false,
-      "required": true
+      ]
+    },
+    "depoimento": {
+      "type": "blocks"
     }
   }
 }

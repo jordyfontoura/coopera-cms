@@ -1,25 +1,26 @@
 {
-  "kind": "collectionType",
+  "kind": "singleType",
   "collectionName": "processos_seletivos",
   "info": {
     "singularName": "processo-seletivo",
     "pluralName": "processos-seletivos",
-    "displayName": "Processos Seletivos"
+    "displayName": "Processo Seletivo"
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
-    "inicio": {
-      "type": "date",
+    "aberto": {
+      "type": "boolean",
+      "default": false,
       "required": true
     },
-    "fim": {
-      "type": "date",
+    "titulo": {
+      "type": "string",
       "required": true
     },
-    "formulario": {
+    "link": {
       "type": "string",
       "required": true
     }
