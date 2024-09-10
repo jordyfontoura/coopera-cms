@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "mentores",
+  "info": {
+    "singularName": "mentor",
+    "pluralName": "mentores",
+    "displayName": "Mentores",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nome": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "cargo": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    },
+    "sobre": {
+      "type": "blocks",
+      "required": true
+    },
+    "foto": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "files",
+        "images"
+      ]
+    }
+  }
+}

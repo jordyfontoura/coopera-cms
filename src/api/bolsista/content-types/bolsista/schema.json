@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bolsistas",
+  "info": {
+    "singularName": "bolsista",
+    "pluralName": "bolsistas",
+    "displayName": "Bolsistas"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nome": {
+      "type": "string",
+      "required": true
+    },
+    "esporte": {
+      "type": "string",
+      "required": true
+    },
+    "foto": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

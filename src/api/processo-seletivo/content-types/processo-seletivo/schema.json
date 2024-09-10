@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "processos_seletivos",
+  "info": {
+    "singularName": "processo-seletivo",
+    "pluralName": "processos-seletivos",
+    "displayName": "Processos Seletivos"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "inicio": {
+      "type": "date",
+      "required": true
+    },
+    "fim": {
+      "type": "date",
+      "required": true
+    },
+    "formulario": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "relatorios",
+  "info": {
+    "singularName": "relatorio",
+    "pluralName": "relatorios",
+    "displayName": "Relatórios"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nome": {
+      "type": "string",
+      "required": true
+    },
+    "arquivo": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}
