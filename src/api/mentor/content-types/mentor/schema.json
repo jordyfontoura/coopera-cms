@@ -23,7 +23,7 @@
       "unique": false
     },
     "sobre": {
-      "type": "blocks",
+      "type": "text",
       "required": true
     },
     "foto": {

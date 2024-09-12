@@ -30,7 +30,7 @@
       ]
     },
     "depoimento": {
-      "type": "blocks"
+      "type": "text"
     }
   }
 }
