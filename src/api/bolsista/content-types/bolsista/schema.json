@@ -32,6 +32,11 @@
     "depoimento": {
       "type": "text"
     },
+    "ativo": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
     "visivel": {
       "type": "boolean",
       "default": true,

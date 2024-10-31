@@ -502,6 +502,9 @@ export interface ApiBolsistaBolsista extends Struct.CollectionTypeSchema {
     foto: Schema.Attribute.Media<'images' | 'files'> &
       Schema.Attribute.Required;
     depoimento: Schema.Attribute.Text;
+    ativo: Schema.Attribute.Boolean &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<true>;
     visivel: Schema.Attribute.Boolean &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<true>;
