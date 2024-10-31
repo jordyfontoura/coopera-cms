@@ -502,6 +502,9 @@ export interface ApiBolsistaBolsista extends Struct.CollectionTypeSchema {
     foto: Schema.Attribute.Media<'images' | 'files'> &
       Schema.Attribute.Required;
     depoimento: Schema.Attribute.Text;
+    visivel: Schema.Attribute.Boolean &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<true>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
@@ -533,9 +536,12 @@ export interface ApiMentorMentor extends Struct.CollectionTypeSchema {
       Schema.Attribute.Required &
       Schema.Attribute.Unique;
     cargo: Schema.Attribute.String & Schema.Attribute.Required;
+    sobre: Schema.Attribute.Text & Schema.Attribute.Required;
     foto: Schema.Attribute.Media<'files' | 'images'> &
       Schema.Attribute.Required;
-    sobre: Schema.Attribute.Text & Schema.Attribute.Required;
+    visivel: Schema.Attribute.Boolean &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<true>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
