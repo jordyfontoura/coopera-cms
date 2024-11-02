@@ -5,11 +5,11 @@ export interface DocumentosRelatorio extends Struct.ComponentSchema {
   info: {
     displayName: 'Relat\u00F3rio';
     icon: 'archive';
+    description: '';
   };
   attributes: {
     nome: Schema.Attribute.String & Schema.Attribute.Required;
-    arquivo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
-      Schema.Attribute.Required;
+    link: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
