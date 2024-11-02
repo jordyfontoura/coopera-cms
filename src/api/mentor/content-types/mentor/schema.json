@@ -34,11 +34,6 @@
         "files",
         "images"
       ]
-    },
-    "visivel": {
-      "type": "boolean",
-      "default": true,
-      "required": true
     }
   }
 }

@@ -502,12 +502,6 @@ export interface ApiBolsistaBolsista extends Struct.CollectionTypeSchema {
     foto: Schema.Attribute.Media<'images' | 'files'> &
       Schema.Attribute.Required;
     depoimento: Schema.Attribute.Text;
-    ativo: Schema.Attribute.Boolean &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<true>;
-    visivel: Schema.Attribute.Boolean &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<true>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
@@ -542,9 +536,6 @@ export interface ApiMentorMentor extends Struct.CollectionTypeSchema {
     sobre: Schema.Attribute.Text & Schema.Attribute.Required;
     foto: Schema.Attribute.Media<'files' | 'images'> &
       Schema.Attribute.Required;
-    visivel: Schema.Attribute.Boolean &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<true>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
@@ -602,6 +593,15 @@ export interface ApiRelatorioRelatorio extends Struct.SingleTypeSchema {
   };
   attributes: {
     relatorios: Schema.Attribute.Component<'documentos.relatorio', true>;
+    horasMentoria: Schema.Attribute.Integer &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<500>;
+    totalMentores: Schema.Attribute.Integer &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<14>;
+    totalMentorados: Schema.Attribute.Integer &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<21>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;

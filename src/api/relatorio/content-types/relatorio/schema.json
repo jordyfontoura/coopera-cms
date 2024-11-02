@@ -17,6 +17,22 @@
       "repeatable": true,
       "component": "documentos.relatorio",
       "required": false
+    },
+    "horasMentoria": {
+      "type": "integer",
+      "default": 500,
+      "required": true
+    },
+    "totalMentores": {
+      "type": "integer",
+      "default": 14,
+      "required": true
+    },
+    "totalMentorados": {
+      "type": "integer",
+      "default": 21,
+      "required": true,
+      "unique": false
     }
   }
 }
